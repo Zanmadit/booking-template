@@ -1,0 +1,44 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": null,
+      "title": "FastAPI Monitoring",
+      "timezone": "browser",
+      "schemaVersion": 30,
+      "version": 1,
+      "refresh": "5s",
+      "panels": [
+        {
+          "type": "timeseries",
+          "title": "Request Duration",
+          "targets": [
+            {
+              "expr": "http_request_duration_seconds_bucket",
+              "refId": "A"
+            }
+          ],
+          "datasource": {
+            "type": "prometheus",
+            "uid": "prometheus"
+          },
+          "fieldConfig": {
+            "defaults": {
+              "unit": "s",
+              "color": {
+                "mode": "palette-classic"
+              }
+            },
+            "overrides": []
+          },
+          "gridPos": {
+            "h": 10,
+            "w": 24,
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    },
+    "overwrite": true
+  }
+  

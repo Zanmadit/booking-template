@@ -1,0 +1,11 @@
+[
+    {
+      "email": "test1@example.com",
+      "hashed_password": "hashed_pass_1"
+    },
+    {
+      "email": "test2@example.com",
+      "hashed_password": "hashed_pass_2"
+    }
+  ]
+  

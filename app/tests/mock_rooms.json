@@ -1,0 +1,21 @@
+[
+    {
+      "hotel_id": 1,
+      "name": "Deluxe Suite",
+      "description": "Spacious suite with city view",
+      "price": 200,
+      "services": ["tv", "minibar", "wifi"],
+      "quantity": 5,
+      "image_id": 201
+    },
+    {
+      "hotel_id": 2,
+      "name": "Ocean View Room",
+      "description": "Room with ocean view",
+      "price": 150,
+      "services": ["balcony", "wifi"],
+      "quantity": 5,
+      "image_id": 202
+    }
+  ]
+  
