@@ -6,6 +6,7 @@ __pycache__/
 
 # Virtual environment
 venv/
+.venv/
 .env
 .env-non-dev
 
@@ -20,3 +21,4 @@ Thumbs.db
 
 # Docker build artifacts
 *.log
+
