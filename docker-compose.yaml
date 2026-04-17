@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:15
+    image: postgres:16
     container_name: booking_db
     volumes:
       - postgresdata:/var/lib/postgresql/data
@@ -27,16 +27,15 @@ services:
     depends_on:
       - db
       - redis
-    command: ["/booking/docker/app.sh"]
+    command: [ "/booking/docker/app.sh" ]
     ports:
       - 9000:8000
-
 
   celery:
     build:
       context: .
     container_name: booking_celery
-    command: ["/booking/docker/celery.sh", "celery"]
+    command: [ "/booking/docker/celery.sh", "celery" ]
     env_file:
       - .env-non-dev
     depends_on:
@@ -46,7 +45,7 @@ services:
     build:
       context: .
     container_name: booking_flower
-    command: ["/booking/docker/celery.sh", "flower"]
+    command: [ "/booking/docker/celery.sh", "flower" ]
     env_file:
       - .env-non-dev
     depends_on:
@@ -72,7 +71,7 @@ services:
     restart: unless-stopped
     ports:
       - 3000:3000
-    
+
 volumes:
   postgresdata:
   grafanadata:
